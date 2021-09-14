@@ -7,7 +7,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
-  width: 100%;
+  width: 90%;
   margin: auto;
   align-items: center;
   justify-content: center;
@@ -16,15 +16,15 @@ body {
 .single-product {
   padding: 10px;
   margin: 10px;
-  height: 480px;
-  background-color: rgb(246, 244, 244);
+  height: 460px;
+  background-color: rgb(241, 234, 234);
   transition: 0.6s;
   border-radius: 15px;
 }
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;
   border-radius: 15px;
-  background-color: rgb(230, 219, 219);
+  background-color: rgb(224, 207, 207);
 }
 .product-image {
   width: 150px;

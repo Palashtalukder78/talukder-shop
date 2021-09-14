@@ -13,7 +13,6 @@ const showProducts = (products) => {
     for (var i = 0; i < 5; i++) {
       starIcon += '<i class="fa fa-star ' + (i < rating ? color : 'text-secondary') + '"></i>';
     };
-
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
@@ -22,19 +21,18 @@ const showProducts = (products) => {
         <div>
           <img class="product-image" src=${image}></img>
         </div>
-        <div style="height: 210px">
-          <h3>${product.title.slice(0, 50)}</h3>
+        <div style="height: 100px" class="mt-2">
+          <h5>${product.title.slice(0, 50)}</h5>
           <h6>Category: ${product.category}</h6>
-          <p class="m-0 p-0">Total Rating Count: ${product.rating.count}</p>
-          <p class="m-0 p-0">
-            ${starIcon}
-          </p>
-          <p class="m-0 p-0">Rating: ${product.rating.rate}
-          </p>
         </div>
-        <h2>Price: $ ${product.price}</h2>
-        <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary">add to cart</button>
-        <button id="details-btn" class="btn btn-info">Details</button>
+        <p class="m-0 p-0">Total Rating Count: <b>${product.rating.count}</b></p>
+        <p class="m-0 p-0">
+          ${starIcon}
+        </p>
+        <p class="m-0 p-0">Rating: <b>${product.rating.rate}</b></p>
+        <h4><b>Price: $ ${product.price}</b></h4>
+        <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary mt-3">add to cart</button>
+        <button id="details-btn" class="btn btn-info mt-3">Details</button>
       </div>
     `;
     document.getElementById("all-products").appendChild(div);
@@ -51,6 +49,7 @@ const addToCart = (id, price) => {
 //It's a Function that return a Float value from 'id'.
 const getInputValue = id => {
   const element = document.getElementById(id).innerText;
+  // const converted = parseFloat(element);
   const converted = parseFloat(element);
   return converted;
 };
