@@ -21,7 +21,7 @@ const showProducts = (products) => {
         <div>
           <img class="product-image" src=${image}></img>
         </div>
-        <div style="height: 100px" class="mt-2">
+        <div style="height: 120px" class="mt-2">
           <h5>${product.title.slice(0, 50)}</h5>
           <h6>Category: ${product.category}</h6>
         </div>
